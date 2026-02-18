@@ -1,23 +1,39 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-<!-- margin botton 3  -->
-<div class="container">
-    <div class="mb-3">
-        <label for="usuario" class="form-label">Usuario:</label>
-        <input type="text" class="form-control" id="usuario">
+<form action="post">
+    
+    <div class="container">
+        
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario:</label>
+            <input type="text" class="form-control" id="usuario">
 
+        </div>
+        
+        <div>
+            <p id="mensaje" class=""></p>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <!-- El input-group pone los elementos en la misma línea -->
+            <div class="input-group">
+                <input type="password" class="form-control" id="password"> 
+                <button type="button" id="alternarbtn" class="btn btn-info">Mostrar contraseña</button>
+            </div>
+
+            <div class="mt-2">
+                <span id="requisito" style="margin-right: 50px;"></span>
+                <span id="contador" class="text-center"> 0 </span> caracteres
+            </div>
+        </div>
+
+        
+        <button type="button" class="btn btn-success btn-lg" id="enviarbtn">Enviar</button>
+        <p id="bloqueo" class="text-danger"></p>
     </div>
-    <div>
-        <p id="mensaje" class="text-sucess"></p>
-    </div>
-    <div>
-        <label for="contraseña" class="form-label">Contraseña:</label>
-        <input type="password" class="form-control" id="password">
-    </div>
-    <div>
-        <p id="requisito"></p>
-    </div>
-</div>
+</form>
 
 <script src="validacion.js"></script>
